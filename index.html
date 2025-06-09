@@ -1,0 +1,850 @@
+            <div class="subsection">
+                <h3>结直肠癌概念</h3>
+                <p>结直肠癌是指发生在结肠和直肠的恶性肿瘤，是消化系统最常见的恶性肿瘤之一。大多数结直肠癌由良性的腺瘤性息肉经过5-10年时间逐渐恶变而成，这为早期筛查和预防提供了重要窗口期。</p>
+            </div><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国结直肠癌早诊早治专家共识（2023版）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'SimSun', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .nav-tab {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 15px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: 500;
+            color: #2c3e50;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-tab:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            background: #667eea;
+            color: white;
+        }
+        
+        .nav-tab.active {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .content-section {
+            display: none;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .subsection {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(248, 249, 250, 0.8);
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .subsection h3 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .subsection h3:before {
+            content: "📋";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(240, 147, 251, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .screening-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .method-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #e3f2fd;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .method-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .method-title {
+            color: #667eea;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .method-title:before {
+            content: "🔬";
+            margin-right: 10px;
+        }
+        
+        .recommendation-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .recommendation-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #ecf0f1;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .recommendation-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .evidence-grade {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .grade-high {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .grade-medium {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .grade-low {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .cost-benefit-chart {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .chart-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 30px;
+            border-radius: 15px;
+            margin: 10px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-bar:before {
+            content: attr(data-label);
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .success-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .case-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(79, 172, 254, 0.3);
+        }
+        
+        .case-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-tab {
+                width: 80%;
+                text-align: center;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .stats-grid,
+            .screening-methods,
+            .success-cases {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>中国结直肠癌筛查与早诊早治指南</h1>
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 15px; margin: 20px 0; box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);">
+                <h2 style="margin: 0; font-size: 1.5em;">📋 权威指导文件</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px;">
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px; backdrop-filter: blur(10px);">
+                        <h3 style="margin: 0 0 10px 0; color: #fff;">🏛️ 国家级指南（2020年）</h3>
+                        <p style="margin: 0; font-size: 0.9em; line-height: 1.4; color: #fff;">《中国结直肠癌筛查与早诊早治指南》<br>
+                        <strong>发布机构：</strong>国家癌症中心等<br>
+                        <strong>指南级别：</strong>国家标准</p>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px; backdrop-filter: blur(10px);">
+                        <h3 style="margin: 0 0 10px 0; color: #fff;">🔬 专家共识（2023版）</h3>
+                        <p style="margin: 0; font-size: 0.9em; line-height: 1.4; color: #fff;">《中国结直肠癌早诊早治专家共识》<br>
+                        <strong>发布机构：</strong>中华医学会肿瘤学分会<br>
+                        <strong>更新内容：</strong>基于2020版指南的循证更新</p>
+                    </div>
+                </div>
+            </div>
+            <p style="color: #fff; font-size: 1em; margin: 10px 0; text-align: center; background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px;">
+                <strong>权威依据：</strong>基于国家级指南与最新专家共识的循证医学指导
+            </p>
+            <p style="color: #fff; font-size: 0.9em; text-align: center; opacity: 0.9;">
+                发布时间：2023年12月26日 | 中华医学杂志第103卷第48期
+            </p>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showSection('basic-knowledge')">基础疾病知识</button>
+            <button class="nav-tab" onclick="showSection('screening-knowledge')">筛查知识介绍</button>
+            <button class="nav-tab" onclick="showSection('screening-value')">筛查价值展示</button>
+            <button class="nav-tab" onclick="showSection('epidemiology')">流行病学数据</button>
+            <button class="nav-tab" onclick="showSection('recommendations')">专家推荐意见</button>
+        </div>
+
+        <!-- 基础疾病知识 -->
+        <div id="basic-knowledge" class="content-section active">
+            <h2 class="section-title">2.1 基础疾病知识</h2>
+            
+            <div class="subsection">
+                <h3>权威依据说明</h3>
+                <div class="highlight-box">
+                    <h4>📋 双重权威保障</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                        <div>
+                            <h5 style="color: #fff; margin-bottom: 10px;">🏛️ 国家级指南（2020年）</h5>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>国家癌症中心牵头制定</li>
+                                <li>国家卫健委认可的权威标准</li>
+                                <li>全国范围内推广应用</li>
+                                <li>政策制定的重要依据</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 style="color: #fff; margin-bottom: 10px;">🔬 专家共识（2023版）</h5>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>中华医学会权威发布</li>
+                                <li>100余名专家参与制定</li>
+                                <li>基于最新循证医学证据</li>
+                                <li>对2020版指南的更新完善</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.95em; opacity: 0.9;">
+                        <strong>指南级别层次：</strong>国家级指南 > 专家共识 > 地方标准 > 专家意见<br>
+                        本指导内容同时依据国家级指南和最新专家共识，确保权威性和时效性。
+                    </p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>发病原因</h3>
+                <div class="highlight-box">
+                    <h4>主要危险因素：</h4>
+                    <ul class="recommendation-list">
+                        <li><strong>年龄因素：</strong>50岁以上发病率显著增加</li>
+                        <li><strong>遗传因素：</strong>家族性腺瘤性息肉病、遗传性非息肉病性结直肠癌</li>
+                        <li><strong>生活方式：</strong>高脂低纤维饮食、缺乏运动、吸烟饮酒</li>
+                        <li><strong>疾病因素：</strong>炎症性肠病、既往结直肠息肉或癌症病史</li>
+                        <li><strong>环境因素：</strong>长期接触致癌物质</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>症状体征</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">早期</div>
+                        <p><strong>症状隐匿：</strong><br>排便习惯改变、便血、腹部不适、贫血等</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">晚期</div>
+                        <p><strong>症状明显：</strong><br>肠梗阻、远处转移症状</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>预后治疗</h3>
+                <div class="cost-benefit-chart">
+                    <h4>不同分期5年生存率对比</h4>
+                    <div class="chart-bar" data-label="早期发现: >90%" style="width: 90%;"></div>
+                    <div class="chart-bar" data-label="Ⅰ期患者: >90%" style="width: 90%;"></div>
+                    <div class="chart-bar" data-label="Ⅳ期患者: 14%" style="width: 14%;"></div>
+                </div>
+                <p><strong>治疗方案：</strong>手术切除、化疗、放疗、靶向治疗和免疫治疗等综合治疗手段</p>
+            </div>
+        </div>
+
+        <!-- 筛查知识介绍 -->
+        <div id="screening-knowledge" class="content-section">
+            <h2 class="section-title">2.2 筛查知识介绍</h2>
+            
+            <div class="screening-methods">
+                <div class="method-card">
+                    <div class="method-title">FIT检测（粪便免疫化学检测）</div>
+                    <p><strong>检测原理：</strong>通过检测粪便中的人血红蛋白来发现消化道出血，是一种非侵入性的筛查方法。</p>
+                    
+                    <h4>检测流程：</h4>
+                    <ol>
+                        <li>患者在家中采集新鲜粪便样本</li>
+                        <li>使用专用采集器具取样</li>
+                        <li>将样本送至实验室进行检测</li>
+                        <li>通过免疫化学方法检测血红蛋白含量</li>
+                        <li>根据检测结果判断是否需要进一步检查</li>
+                    </ol>
+                    
+                    <div class="highlight-box">
+                        <h4>准确性指标：</h4>
+                        <ul>
+                            <li>敏感性：检出结直肠癌的敏感性约为79-85%</li>
+                            <li>特异性：约为90-95%</li>
+                            <li>对于进展期腺瘤的检出率约为25-30%</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>适用人群：</strong>50-75岁无症状人群的初筛，建议每年进行一次检测。</p>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-title">结肠镜检查</div>
+                    <p><strong>检查原理：</strong>结肠镜是一种带有摄像头的柔性内镜，可以直接观察整个结肠和直肠的粘膜情况，同时能够进行活检和息肉切除。</p>
+                    
+                    <h4>检查流程：</h4>
+                    <ol>
+                        <li><strong>术前准备：</strong>检查前3天开始调整饮食，避免高纤维食物</li>
+                        <li><strong>肠道准备：</strong>检查前一天服用泻药进行肠道清洁</li>
+                        <li><strong>镇静麻醉：</strong>根据需要给予镇静剂</li>
+                        <li><strong>镜检过程：</strong>医生缓慢插入结肠镜，仔细观察肠道粘膜</li>
+                        <li><strong>治疗处理：</strong>发现息肉可同时切除，异常部位取活检</li>
+                        <li><strong>术后观察：</strong>监测患者生命体征，确认无并发症</li>
+                    </ol>
+                    
+                    <div class="highlight-box">
+                        <h4>准确性指标：</h4>
+                        <ul>
+                            <li>被誉为结直肠癌筛查的"金标准"</li>
+                            <li>对结直肠癌的检出敏感性接近100%</li>
+                            <li>对腺瘤性息肉的检出率约为90-95%</li>
+                            <li>漏诊率极低</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>适用人群：</strong>50岁以上所有成年人（高危人群可提前至45岁），建议每10年进行一次（如无异常发现）。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 筛查价值展示 -->
+        <div id="screening-value" class="content-section">
+            <h2 class="section-title">2.3 筛查价值展示</h2>
+            
+            <div class="subsection">
+                <h3>数据可视化筛查效果</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">15-33%</div>
+                        <p>规范筛查可降低死亡率</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30-35%</div>
+                        <p>结肠镜筛查死亡率降幅</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15-20%</div>
+                        <p>FIT筛查死亡率降幅</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">40%+</div>
+                        <p>联合筛查策略效果最佳</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>成本效益分析</h3>
+                <div class="highlight-box">
+                    <h4>经济效益显著：</h4>
+                    <p>结直肠癌筛查是公认的具有良好成本效益比的预防措施。每投入1元用于筛查，可节省治疗费用3-5元。</p>
+                </div>
+                
+                <div class="cost-benefit-chart">
+                    <h4>成本构成与效益对比</h4>
+                    <div class="chart-bar" data-label="筛查成本" style="width: 20%;"></div>
+                    <div class="chart-bar" data-label="避免的治疗成本" style="width: 80%;"></div>
+                    <div class="chart-bar" data-label="社会效益" style="width: 100%;"></div>
+                </div>
+                
+                <h4>不同筛查策略的成本效益：</h4>
+                <ul class="recommendation-list">
+                    <li><strong>FIT筛查：</strong>成本较低，适合大规模人群筛查</li>
+                    <li><strong>结肠镜筛查：</strong>一次性成本较高，但长期效益显著</li>
+                    <li><strong>分层筛查策略：</strong>根据风险分层选择不同方法，成本效益最优</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>成功案例分享</h3>
+                <div class="success-cases">
+                    <div class="case-card">
+                        <div class="case-title">🇺🇸 美国成功经验</div>
+                        <p>自1980年代推广结直肠癌筛查以来，发病率和死亡率均显著下降。50岁以上人群筛查率从2000年的38%提高到2018年的69%，结直肠癌死亡率下降了50%以上。</p>
+                    </div>
+                    
+                    <div class="case-card">
+                        <div class="case-title">🇨🇳 国内实践成果</div>
+                        <p>中国多个地区开展的结直肠癌筛查项目显示，通过社区筛查可以将早期癌症检出率提高至60%以上，显著改善了患者预后和生存质量。</p>
+                    </div>
+                    
+                    <div class="case-card">
+                        <div class="case-title">📊 典型案例数据</div>
+                        <p>某市5年筛查项目：筛查10万人次，检出早期癌症200例，进展期腺瘤1500例。项目实施后该地区结直肠癌5年生存率从45%提高到75%，医疗费用总支出减少30%。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 流行病学数据 -->
+        <div id="epidemiology" class="content-section">
+            <h2 class="section-title">流行病学现状</h2>
+            
+            <div class="subsection">
+                <h3>全球及中国发病情况</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">第3位</div>
+                        <p>全球恶性肿瘤发病率排名</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">第2位</div>
+                        <p>全球恶性肿瘤死亡率排名</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">40.8万</div>
+                        <p>2016年中国新发病例</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">19.6万</div>
+                        <p>中国年度死亡例数</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>人群分布特征</h3>
+                <div class="highlight-box">
+                    <h4>性别差异：</h4>
+                    <p>男性标化发病率：21.7/10万 | 女性标化发病率：14.6/10万</p>
+                    
+                    <h4>地区差异：</h4>
+                    <p>城市地区标化发病率：20.0/10万 | 农村地区标化发病率：14.7/10万</p>
+                    
+                    <h4>生存率趋势：</h4>
+                    <p>2012-2015年相对生存率为56.9%，比2003-2005年提高了10%左右</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>分期诊断现状</h3>
+                <div class="cost-benefit-chart">
+                    <h4>不同分期患者占比对比</h4>
+                    <div class="chart-bar" data-label="中国Ⅰ期患者占比: 15.2%" style="width: 15.2%;"></div>
+                    <div class="chart-bar" data-label="美国Ⅰ期患者占比: 24.1%" style="width: 24.1%;"></div>
+                </div>
+                <p class="highlight-box">早期患者诊断率偏低是导致中国结直肠癌患者生存率落后的主要原因</p>
+            </div>
+        </div>
+
+        <!-- 专家推荐意见 -->
+        <div id="recommendations" class="content-section">
+            <h2 class="section-title">专家推荐意见</h2>
+            
+            <div class="subsection">
+                <h3>筛查技术推荐</h3>
+                <ul class="recommendation-list">
+                    <li>FIT，推荐筛查周期为每年1次 <span class="evidence-grade grade-medium">强推荐，证据分级：中</span></li>
+                    <li>多靶点粪便FIT-DNA检测，推荐筛查周期为每1~3年1次 <span class="evidence-grade grade-low">弱推荐，证据分级：低</span></li>
+                    <li>肠镜检查推荐可至回盲部的规范化全结肠镜检查，推荐筛查周期为每5~10年1次 <span class="evidence-grade grade-medium">强推荐，证据分级：中</span></li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>普通人群筛查方案推荐</h3>
+                <div class="highlight-box">
+                    <h4>筛查对象：</h4>
+                    <p>40~74岁一般人群 <span class="evidence-grade grade-low">弱推荐，证据分级：低</span></p>
+                    
+                    <h4>推荐方案：</h4>
+                    <p>推荐每5~10年1次结肠镜检查；如筛查对象拒绝直接接受结肠镜检查，采用问卷风险评估和FIT进行初筛，对初筛阳性者（高危人群或FIT阳性）行结肠镜检查 <span class="evidence-grade grade-low">强推荐，证据分级：弱</span></p>
+                    
+                    <h4>伺机性筛查：</h4>
+                    <p>对于伺机性筛查推荐规范化全结肠镜检查 <span class="evidence-grade grade-high">强推荐，证据分级：高</span></p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>高危人群筛查方案推荐</h3>
+                <ul class="recommendation-list">
+                    <li>若筛查对象的2个一级亲属确诊结直肠癌或进展期腺瘤（或1个一级亲属确诊年龄<60岁），建议从40岁开始或比家族中最早确诊结直肠癌的年龄提前10年开始，每5年进行1次结肠镜检查 <span class="evidence-grade grade-medium">弱推荐，证据分级：中</span></li>
+                    <li>对于腺瘤性息肉综合征患者或致病突变携带者，建议应每年进行1次全结肠镜检查 <span class="evidence-grade grade-low">强推荐，证据分级：低</span></li>
+                    <li>对于Lynch综合征家系中携带致病突变者，建议自20~25岁开始接受结肠镜检查，每2年一次，直到40岁，然后每年接受1次结肠镜检查 <span class="evidence-grade grade-low">强推荐，证据分级：低</span></li>
+                    <li>溃疡性结肠炎患者最迟应在症状出现8年后接受肠镜筛查，并接受全结肠多部位活检 <span class="evidence-grade grade-low">强推荐，证据分级：低</span></li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>早期肿瘤内镜诊断推荐</h3>
+                <ul class="recommendation-list">
+                    <li>建议高质量的结肠镜检查，推荐"分次给药"进行肠道准备，并由受过系统训练的有经验的内镜医师行规范、详细的结肠镜检查 <span class="evidence-grade grade-high">强推荐，证据分级：高</span></li>
+                    <li>早期结直肠癌的内镜分型建议可参照巴黎分型标准。如有条件，建议结合电子染色内镜或放大内镜对可疑病变进一步观察 <span class="evidence-grade grade-low">强推荐，证据分级：低</span></li>
+                    <li>对平坦型病变的内镜下处理，建议整块切除（EMR/ESD）病灶后送检 <span class="evidence-grade grade-low">强推荐，证据分级：低</span></li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>早期结直肠肿瘤外科处理推荐</h3>
+                <div class="highlight-box">
+                    <p>对于术前评估提示超出内镜切除适应证范围的早期肿瘤以及内镜切除术后评估需要追加外科手术的患者，建议结合肿瘤生长位置、大小、患者手术耐受度以及患者意愿等综合考虑决定具体的手术方式以及切除范围。<span class="evidence-grade grade-medium">强推荐，GRADE分级：中</span></p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>术后复发监测推荐</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">Ⅰ期</div>
+                        <p>每6个月1次，共5年</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Ⅱ~Ⅲ期</div>
+                        <p>每3个月1次，共3年；然后每6个月1次，至术后5年</p>
+                    </div>
+                </div>
+                
+                <h4>常规随访内容包括：</h4>
+                <ul class="recommendation-list">
+                    <li>体格检查，需要进行肛门指诊</li>
+                    <li>CEA监测</li>
+                    <li>肝脏超声检查（Ⅰ~Ⅱ期）</li>
+                    <li>每年1次胸腹盆CT（Ⅲ期或CEA、超声异常时）</li>
+                    <li>纤维结肠镜检查：术后1年内进行结肠镜检查；每次结肠镜检查若发现进展期腺瘤，需在1年内复查</li>
+                </ul>
+                
+                <p class="highlight-box">
+                    对于切除的腺瘤患者，应综合评估腺瘤大小、数量和组织学分型，选择适宜间隔的结肠镜检查。<span class="evidence-grade grade-high">强推荐，证据分级：高</span><br><br>
+                    对于经治疗后无肿瘤残留的结直肠癌患者推荐规范随访，随访内容包括：体格检查、肿瘤指标、影像学检查以及肠镜检查。<span class="evidence-grade grade-high">强推荐，证据分级：高</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // 隐藏所有内容区域
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // 移除所有导航按钮的active状态
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // 显示选中的内容区域
+            document.getElementById(sectionId).classList.add('active');
+            
+            // 添加对应导航按钮的active状态
+            event.target.classList.add('active');
+        }
+
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 添加滚动效果
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 0.6s ease-out';
+                    }
+                });
+            }, observerOptions);
+
+            // 观察所有subsection元素
+            const subsections = document.querySelectorAll('.subsection');
+            subsections.forEach(subsection => {
+                observer.observe(subsection);
+            });
+
+            // 添加卡片悬停效果
+            const cards = document.querySelectorAll('.method-card, .stat-card, .case-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // 添加数字动画效果
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(number => {
+                const text = number.textContent;
+                if (text.includes('%')) {
+                    const value = parseInt(text);
+                    animateNumber(number, 0, value, '%');
+                } else if (text.includes('万')) {
+                    const value = parseFloat(text);
+                    animateNumber(number, 0, value, '万');
+                } else if (text.includes('位')) {
+                    number.style.fontSize = '2em';
+                }
+            });
+        });
+
+        function animateNumber(element, start, end, suffix) {
+            const duration = 2000;
+            const increment = (end - start) / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= end) {
+                    current = end;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + suffix;
+            }, 16);
+        }
+
+        // 添加图表动画
+        function animateCharts() {
+            const chartBars = document.querySelectorAll('.chart-bar');
+            chartBars.forEach((bar, index) => {
+                setTimeout(() => {
+                    bar.style.animation = 'slideIn 1s ease-out forwards';
+                }, index * 200);
+            });
+        }
+
+        // 添加CSS动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    width: 0;
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            
+            .chart-bar {
+                animation: slideIn 1s ease-out forwards;
+            }
+            
+            .subsection {
+                transition: all 0.3s ease;
+            }
+            
+            .subsection:hover {
+                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+                transform: translateY(-2px);
+            }
+            
+            .recommendation-list li {
+                transition: all 0.3s ease;
+            }
+            
+            .recommendation-list li:hover {
+                background: rgba(102, 126, 234, 0.05);
+                padding-left: 35px;
+                border-radius: 8px;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
